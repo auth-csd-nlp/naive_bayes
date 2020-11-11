@@ -10,7 +10,7 @@ docs.append(['very powerful', 'the most fun film of the summer'])
 test_doc = 'the film was predictable with no fun'
 
 
-class NB():
+class NB:
 
     def __init__(self, binary=False, bernoulli=False):
         self.priors = []
@@ -40,7 +40,7 @@ class NB():
                         count[token] += 1
                     else:
                         count[token] = 1
-                    if not token in self.vocabulary:
+                    if token not in self.vocabulary:
                         self.vocabulary.append(token)
             self.lengths.append(s)
             counts.append(count)
@@ -72,7 +72,7 @@ class NB():
         return scores
 
 
-def test_NB(binary=False, bernoulli=False):
+def test(binary=False, bernoulli=False):
     """
     >>> test_NB()
     [0.1841513848957118, 0.8158486151042883]
