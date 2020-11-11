@@ -74,11 +74,11 @@ class NB:
 
 def test(binary=False, bernoulli=False):
     """
-    >>> test_NB()
+    >>> test()
     [0.1841513848957118, 0.8158486151042883]
-    >>> test_NB(binary=True)
+    >>> test(binary=True)
     [0.221238739047567, 0.7787612609524331]
-    >>> test_NB(bernoulli=True)
+    >>> test(bernoulli=True)
     [0.12153600386063369, 0.8784639961393663]
     """
     nb = NB(binary=binary, bernoulli=bernoulli)
